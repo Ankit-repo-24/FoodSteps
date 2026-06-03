@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+}
+/* Glassmorphism card example */
+.glass {
+  @apply bg-white/30 backdrop-blur-sm rounded-xl border border-white/20 shadow-lg;
+}
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+/* Custom animation for rotating hero item */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Section styling for better visual hierarchy */
+.section-header {
+  @apply border-b-2 border-purple-600 pb-4;
+}
+
+/* Improved spacing for main sections */
+.content-section {
+  @apply px-2 sm:px-4 md:px-6;
+}
+
+/* Better recipe grid spacing */
+.recipe-grid {
+  @apply gap-6 md:gap-8;
+}
+
+/* Improved search input focus state */
+input[type="text"]:focus {
+  @apply ring-2 ring-amber-300/50;
+}
+
